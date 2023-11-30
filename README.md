@@ -38,10 +38,10 @@ npm run lint
 ```
 >>>>>>> 23990ea (Initial commit)
 >>>>>>> 
-#movie search app priview screenshots
-![Screenshot 2023-11-30 145600](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/c9acd403-362e-4d7d-872e-a953ff6f2c5c)
-![Screenshot 2023-11-30 145800](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/1a8733![Screenshot 2023-11-30 150200](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/30170d75-71b0-4bfe-8118-a44b72c4a6d9)
-f8-92c9-42a5-9a80-b10b3085beff)
-![Screenshot 2023-11-30 150244](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/98103b9f-3![Screenshot 2023-11-30 150311](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/761c182a-a8a5-45e8-945c-b2db82518002)
-ceb-![Screenshot 2023-11-30 145738](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/2ba0fbe4-1daf-4216-8fc8-aadf5267cead)
-478a-9b04-af2025bc0f09)
+#movie s![Screenshot 2023-11-30 145600](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/4f7026d5-6d9b-47d5-86bc-a52d2e49babc)
+earch![Screenshot 2023-11-30 150200](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/270f9dfd-eba4-45c5-bec2-5d1a768cbd40)
+ app p![Screenshot 2023-11-30 150244](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/6931705a-9cd3-4b61-862a-0aa8f20def5b)
+rivie![Screenshot 2023-11-30 150311](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/bf772b2c-03b0-41b7-b70f-ad10abeb3cdf)
+w s![Screenshot 2023-11-30 145738](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/13390433-e416-4016-a528-3da5a125ef3c)
+creenshots
+ 
