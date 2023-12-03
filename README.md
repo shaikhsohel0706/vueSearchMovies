@@ -42,6 +42,6 @@ npm run lint
 earch![Screenshot 2023-11-30 150200](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/270f9dfd-eba4-45c5-bec2-5d1a768cbd40)
  app p![Screenshot 2023-11-30 150244](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/6931705a-9cd3-4b61-862a-0aa8f20def5b)
 rivie![Screenshot 2023-11-30 150311](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/bf772b2c-03b0-41b7-b70f-ad10abeb3cdf)
-w s![Screenshot 2023-11-30 145738](https://github.com/shaikhsohel0706/vueSearchMovies/assets/121325540/13390433-e416-4016-a528-3da5a125ef3c)
+ 
 creenshots
  
