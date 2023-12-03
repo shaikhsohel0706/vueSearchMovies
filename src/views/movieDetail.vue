@@ -1,82 +1,58 @@
 <template>
-    <div class="movie-detail">
-      <h2>{{movie.Title}}</h2>
-      <p class="movie"  data-release-year="">{{ movie.Year }}</p>
-      <p class="Genre"  data-type="">{{ movie.Genre}}</p>
-      <p class="imdb"  data-type="">{{ movie.imdbRating}}</p>
-     
-      <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
-      <p class="Cast">{{ movie.Actors }}</p>
-      <p class="Description">{{ movie.Plot }}</p>
-      
-     
-    </div>
-  </template>
-  
-  <script>
-  import { ref, onBeforeMount } from 'vue';
-  import { useRoute } from 'vue-router';
-  import env from '@/env.js';
-  
-  export default {
-    setup () {
-      const movie = ref({});
-      const route = useRoute();
-  
-      onBeforeMount(() => {
-        fetch(`http://www.omdbapi.com/?apikey=${env.apikey}&i=${route.params.id}&plot=full`)
-          .then(response => response.json())
-          .then(data => {
-            movie.value = data;
-          });
-      });
-  
-      return {
-        movie
-      }
+  <div class="movie-detail">
+    <h2>{{ movie.Title }}</h2>
+    <p class="movie" data-release-year="">{{ movie.Year }}</p>
+    <p class="imdbID" data-imdbID="">{{ movie.imdbID }}</p>
+    <p class="Type" data-Type="">{{ movie.Type }}</p>
+    <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
+  </div>
+  <div></div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      movie: {}
     }
+  },
+  mounted() {
+    this.movie = JSON.parse(this.$route.query.movie)
+    console.log(this.movie)
   }
-  </script>
-  
-  <style lang="scss">
-  .movie-detail {
-    padding: 16px;
-  
-    h2 {
-      color: #FFF;
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-  
-    .featured-img {
-      display: block;
-      max-width: 200px;
-      margin-bottom: 16px;
-    }
-  
-    p {
-      color: #FFF;
-      font-size: 18px;
-      line-height: 1.4;
-    }
-    .movie::before {
-  content:  "Release Year: " attr(data-release-year);
-  
 }
-.Genre::before {
-  content:  "Genre: " attr(data-release-year);
-  
-}
-.Cast::before{
-  content:  "Cast: " attr(data-release-year);
-  
-}
-.Description::before{
-    content:  "Description: " attr(data-release-year);
-}
-.imdb::before{
-    content:  "IMDBRating: " attr(data-release-year);
-}
+</script>
+
+<style lang="scss">
+.movie-detail {
+  padding: 16px;
+
+  h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
   }
-  </style> 
+
+  .featured-img {
+    display: block;
+    max-width: 200px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .movie::before {
+    content: 'Release Year: ' attr(data-release-year);
+  }
+  .imdbID::before {
+    content: 'imdbID: ' attr(data-imdbID);
+  }
+  .Type::before {
+    content: 'Type: ' attr(data-Type);
+  }
+}
+</style>

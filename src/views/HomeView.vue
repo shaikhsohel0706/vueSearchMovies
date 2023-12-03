@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="feature-card">
-      <RouterLink to="/movie/tt0409591">
+      <RouterLink to="/movie">
         <img
           src="https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
           alt="Naruto Poster"
@@ -16,24 +16,23 @@
         </div>
       </RouterLink>
     </div>
-
     <form @submit.prevent="searchMovies" class="search-box">
       <input type="text" placeholder="What are you looking for?" v-model="search" />
       <input type="submit" value="Search" />
     </form>
-
     <div class="movies-list">
       <div class="movie" v-for="movie in movies" :key="movie.imdbID">
-        <router-link :to="'/movie/' + movie.imdbID" class="movie-link">
+        <RouterLink :to="{ name: 'MovieDetail', query: {movie: JSON.stringify(movie)} }" class="movie-link">
           <div class="product-image">
-            <img :src="movie.Poster" alt="Movie Poster"/>
+            <img :src="movie.Poster" alt="Movie Poster" />
             <div class="type">{{ movie.Type }}</div>
+
           </div>
           <div class="detail">
             <p class="year">{{ movie.Year }}</p>
             <h3>{{ movie.Title }}</h3>
           </div>
-        </router-link>
+        </RouterLink>
       </div>
     </div>
 
@@ -42,13 +41,13 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { ref } from 'vue'
 import env from '@/env.js'
 
 const search = ref('')
 const movies = ref([])
+ 
 const showMovieNotFound = ref(false)
 
 const searchMovies = () => {
@@ -56,13 +55,13 @@ const searchMovies = () => {
     fetch(`http://www.omdbapi.com/?apikey=${env.apikey}&s=${search.value}`)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data.Search,"data");
         if (data.Search && data.Search.length > 0) {
           movies.value = data.Search
           showMovieNotFound.value = false
         } else {
           movies.value = []
           showMovieNotFound.value = true
-
           console.log('Movie not found')
         }
 
@@ -72,6 +71,11 @@ const searchMovies = () => {
         console.error('Error fetching data:', error)
       })
   }
+}
+ 
+// eslint-disable-next-line no-unused-vars
+const navigateToMovieDetail = (movie) => {
+  console.log(movie);
 }
 </script>
 
